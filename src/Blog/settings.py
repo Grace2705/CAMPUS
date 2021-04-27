@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY', default = 'django-insecure-j-4r9i6q#wwqzqdoa$7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast = bool, default = True)
 
-ALLOWED_HOSTS = [ '127.0.0.1' ,'mycampusstory.herokuapp.com']
+ALLOWED_HOSTS = [ '127.0.0.1' ,'campusstory.herokuapp.com']
 
 
 # Application definition
