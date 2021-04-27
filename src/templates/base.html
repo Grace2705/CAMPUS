@@ -10,7 +10,9 @@
 <style>
     .div1{
         text-align: left;
-        text-decoration: none;       
+        text-decoration: none;
+        
+              
     }
     .div2{
         text-align: right;
@@ -27,14 +29,20 @@
         background-color:rgb(16, 87, 96);
         color: white;
     }
+
+    a{
+        text-decoration: none;
+        color: rgb(16, 87, 96);
+    }
+    
 </style>
 <body>
      <!-- Navigation bar-->
      <nav>
         <div class= 'div1'>
-            <h1 style="background-color:rgb(10, 88, 88)">
-                <p style="color: rgb(251, 225, 201);">
-                    <a href="{% url 'home' %}">My Campus Story</a>
+            <h1 style="background-color:rgb(16, 87, 96)">
+                <p>
+                    <a style="color: white; text-decoration: none;" href="{% url 'home' %}">My Campus Story</a>
                 </p>
             </h1>
         </div>
