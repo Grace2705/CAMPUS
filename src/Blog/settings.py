@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default = 'django-insecure-j-4r9i6q#wwqzqdoa$7
 DEBUG = config('DEBUG', cast = bool, default = False)
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = [ '127.0.0.1','campusstory.herokuapp.com']
+ALLOWED_HOSTS = ['campusstory.herokuapp.com']
 
 
 # Application definition
