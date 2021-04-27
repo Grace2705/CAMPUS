@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default = 'django-insecure-j-4r9i6q#wwqzqdoa$74vaeg-_n*k+g_+yx9e&7n83yjggl77x')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast = bool, default = True)
+DEBUG = config('DEBUG', cast = bool, default = False)
+DEBUG_PROPAGATE_EXCEPTIONS = True
 
 ALLOWED_HOSTS = [ '127.0.0.1' ,'campusstory.herokuapp.com']
 
