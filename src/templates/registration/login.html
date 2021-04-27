@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+	<div >
+		<div>
+			<div>
+				<div>
+					<h3">LOGIN</h3>
+				</div>
+				<div>
+					<form method="POST" action="">
+						{% csrf_token %}
+						<div>
+							<div>
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+
+							<input type="text" name="username" placeholder="Username..." class="form-control">
+						</div>
+
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+
+								<input type="password" name="password" placeholder="Password..." class="form-control" >
+						</div>
+
+							<div>
+				 				<input type="submit" value="Login">
+				   			</div>
+					</form>
+
+				</div>
+				<div>
+					<div>
+						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Register</a>
+					</div>
+					<div>
+						Forgot password?<a class="nav-link text-black font-weight-bold" href="{% url 'password_reset' %}">Reset Password</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+{% endblock content %}

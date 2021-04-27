@@ -1,0 +1,2 @@
+# CAMPUS
+ A blog application

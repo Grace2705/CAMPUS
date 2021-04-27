@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Sign Up
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+    .register_form{
+        display: block;
+        text-align: center;
+    }
+    form{
+        display: inline-block;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 5%;
+        text-align: left;
+    }
+    button{
+        background-color: rgb(11, 68, 76);
+        border: none;
+        color: white;
+        padding:5%;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        align-self: center;
+    }
+</style>
+
+{% if messages %}
+
+{% for message in messages %}
+
+<!--Panel-->
+<div class="card border-danger mb-3">
+    <div class="card-header text-danger">
+        <p class="card-title">{{ message }}</p>
+    </div>
+</div>
+<!--/.Panel-->
+
+{% endfor %}
+
+{% endif %}
+
+
+
+<div class='register_form'>
+<form method="post">
+    {% csrf_token %}
+    <strong style="color: rgb(42, 81, 86); font-family:'Times New Roman', Times, serif">
+        Register
+    </strong>
+
+    {% for field in form %}
+    <p>
+        {{ field.label_tag }}
+        {{ field }}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+    </p>
+    {% endfor %}
+
+  
+    <button type="submit">Register</button>
+
+{% endblock content %}
